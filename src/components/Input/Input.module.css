@@ -1,9 +1,10 @@
 .wrapper {
 	position: relative;
 	background-color: rgba(246, 248, 250, 1);
+	width: 100%;
 }
 
-.wrapper.filled:not(.error.focused) .cheked {
+.wrapper.filled:not(.error):not(.focused) .valid {
 	display: block;
 	position: absolute;
 	top: 50%;
@@ -50,7 +51,7 @@
 	outline: rgba(241, 54, 54, 1) solid;
 }
 
-.cheked {
+.valid {
 	display: none;
 }
 

@@ -1,10 +1,11 @@
 import { useState, useCallback, FormEvent } from 'react';
 import classes from './Form.module.css';
 import Input from '../Input';
+import Checkbox from '../Checkbox';
 
 interface Errors {
-	name?: string;
-	phone?: string;
+	name?: boolean;
+	phone?: boolean;
 }
 
 const Form = () => {
@@ -25,7 +26,7 @@ const Form = () => {
 		const { value } = e.currentTarget;
 
 		if(value.length < 2) {
-			setErrors( prev => ({ ...prev, name: 'Слишком короткое имя' }))
+			setErrors( prev => ({ ...prev, name: true }))
 		} else {
 			setErrors(prev => ({ ...prev, name: undefined }))
 		}
@@ -35,7 +36,7 @@ const Form = () => {
 		const { value } = e.currentTarget;
 
 		if(value.length < 11) {
-			setErrors(prev => ({ ...prev, phone: 'Номер телефона слишком короткий' }))
+			setErrors(prev => ({ ...prev, phone: true }))
 		} else {
 			setErrors(prev => ({ ...prev, phone: undefined }))
 		}
@@ -47,14 +48,11 @@ const Form = () => {
 				<h2 className={classes.title}>Отправь форму</h2>
 				<div className={classes.wrapper}>
 					<div className={classes.block}>
-						<Input onValidate={onValidateName} label='Имя' name='name' errorMessage={errors.name} />
-						<Input onValidate={onValidatePhone} type='tel' name='phone' label='Телефон' errorMessage={errors.phone} />
+						<Input onValidate={onValidateName} label='Имя' name='name' error={errors.name} />
+						<Input onValidate={onValidatePhone} type='tel' name='phone' label='Телефон' error={errors.phone} />
 					</div>
 					<div className={classes.block}>
-						<label className={classes.checkbox}>
-							<input className={classes.check} type="checkbox" name='agreement' />
-							<span>Согласен, отказываюсь</span>
-						</label>
+						<Checkbox label={'Согласен, отказываюсь'}></Checkbox>
 						<button type='submit' className={classes.button}>Отправить</button>
 					</div>
 				</div>

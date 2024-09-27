@@ -1,0 +1,22 @@
+.label {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: 16px; 
+}
+
+.input {
+	width: 24px;
+	height: 24px;
+	border-radius: 4px;
+}
+
+input:checked {
+	background-color: rgba(42, 108, 234, 1);
+}
+
+.text {
+	font-size: 16px;
+	line-height: 28px;
+}

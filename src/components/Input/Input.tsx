@@ -9,12 +9,12 @@ interface Props {
 	name: string;
 	value?: string;
 	label: string;
-	errorMessage?: string;
+	error?: boolean;
 	onValidate: (e: FormEvent<HTMLInputElement>) => string | void;
 };
 
 
-const Input  = ({ type = 'text', label, onValidate, errorMessage, name }: Props) => {
+const Input  = ({ type = 'text', label, onValidate, error, name }: Props) => {
 	const [isFocused, setIsFocused] = useState(false);
 	const [isFilled, setIsFilled] = useState(false);
 	
@@ -34,10 +34,10 @@ const Input  = ({ type = 'text', label, onValidate, errorMessage, name }: Props)
 	},[]);
 
 	return (
-		<div className={classNames(classes.wrapper, { [classes.focused]: isFocused, [classes.filled]: isFilled, [classes.error]: errorMessage, })}>
+		<div className={classNames(classes.wrapper, { [classes.focused]: isFocused, [classes.filled]: isFilled, [classes.error]: error, })}>
 			<label className={classes.label}>{label}</label>
 			<input onFocus={handleonFocus} onChange={onChange} onBlur={handleBlur} className={classes.input} type={type} name={name}></input>
-			<div className={classes.cheked}>
+			<div className={classes.valid}>
 				<Cheked/>
 			</div>
 			<div className={classes.cancel}>
