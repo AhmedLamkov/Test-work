@@ -1,0 +1,25 @@
+.anchors {
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px;
+	border-bottom: 1px solid rgba(236, 239, 242, 1);
+	text-decoration: none;
+}
+
+.anchor {
+	font-size: 18px;
+	line-height: 32px;
+	color: rgba(131, 137, 143, 1);
+}
+
+.icon svg {
+	width: 24px;
+	height: 24px;
+	fill: rgba(131, 137, 143, 1);
+}

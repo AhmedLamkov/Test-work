@@ -1,0 +1,14 @@
+.footer {
+	padding: 28px;
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.copyRight {
+	font-size: 18px;
+	line-height: 32px;
+}

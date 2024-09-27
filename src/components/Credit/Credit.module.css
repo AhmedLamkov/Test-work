@@ -1,0 +1,50 @@
+.background {
+  background-color:rgba(246, 248, 250, 1);
+}
+
+.credit {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	max-width: 1216px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 592px;
+}
+
+.title {
+	font-size: 18px;
+	line-height: 32px;
+	font-weight: 600;
+	margin-bottom: 17px;
+}
+
+.description {
+	font-size: 16px;
+	line-height: 28px;
+}
+
+@media screen and (max-width: 1200px) {
+	.credit {
+		padding: 0 16px;
+		row-gap: 20px;
+	}
+
+	.wrapper {
+		max-width: 100%;
+	}
+
+	.title {
+		margin-bottom: 46px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.title {
+		margin-bottom: 14px;
+	}
+}

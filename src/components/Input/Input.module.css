@@ -1,0 +1,85 @@
+.wrapper {
+	position: relative;
+	background-color: rgba(246, 248, 250, 1);
+}
+
+.wrapper.filled:not(.error.focused) .cheked {
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 8px;
+}
+
+.input {
+	width: 100%;
+	max-width: 384px;
+	margin-top: 28px;
+	padding-left: 16px;
+	border: 1px solid rgba(246, 248, 250, 1);
+	font-size: 18px;
+	line-height: 32px;
+	background-color: inherit;
+}
+
+.input:focus {
+	outline: none;
+}
+
+.label {
+	position: absolute;
+	pointer-events: none;
+	left: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 18px;
+	line-height: 32px;
+	transition: 0.125s linear;
+	z-index: 10;
+}
+
+.focused .label, .filled .label {
+	font-size: 14px;
+	line-height: 24px;
+	top: 8px;
+	color: rgba(131, 137, 143, 1);
+	transform: none;
+}
+
+.error {
+	outline: rgba(241, 54, 54, 1) solid;
+}
+
+.cheked {
+	display: none;
+}
+
+.cancel {
+	display: none;
+}
+
+.error .cancel {
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 8px;
+}
+
+@media screen and (max-width:1200px) {
+	.input {
+		max-width: 352px;
+	}
+}
+
+@media screen and (max-width:767px) {
+	.input {
+		max-width: 343px;
+	}
+}
+
+@media screen and (max-width:374px) {
+	.input {
+		max-width: 288px;
+	}
+}

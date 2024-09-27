@@ -1,0 +1,25 @@
+.header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10;
+	margin: 0 auto;
+	max-width: 1216px;
+	padding: 28px 16px;
+	position: relative;
+	margin-bottom: 233px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	column-gap: 9px;
+}
+
+.text {
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 600;
+	color: rgba(255, 255, 255, 1);
+}

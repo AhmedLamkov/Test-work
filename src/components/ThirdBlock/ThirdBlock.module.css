@@ -1,0 +1,90 @@
+.wrapper {
+	display: flex;
+	margin: 0 auto;
+}
+
+.block {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-right: 32px;
+	max-width: 592px;
+}
+
+.title {
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 600;
+	margin-bottom: 18px;
+}
+
+.text {
+	font-size: 16px;
+	line-height: 28px;
+	color: rgba(94, 100, 106, 1);
+}
+
+.image {
+	background: url(/public/images/Finance.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 592px;
+	height: 448px;
+}
+
+@media screen and (max-width: 1200px) {
+	.wrapper {
+		padding: 0 16px;
+	}
+
+	.block {
+		max-width: 352px;
+		margin-right: 24px;
+	}
+
+	.title {
+		font-size: 20px;
+		line-height: 24px;
+	}	
+
+	.image {
+		width: 351px;
+		height: 265px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.wrapper {
+		flex-direction: column-reverse;
+		row-gap: 7px;
+	}
+
+	.block {
+		margin-right: 0;
+	}
+
+	.title {
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	.text {
+		text-align: center;
+		margin: 0;
+		margin-bottom: 32px;
+	}
+
+	.text:last-child {
+		margin-bottom: 0px;
+	}
+}
+
+@media screen and (max-width: 374px) {
+	.image {
+		width: 288px;
+	}
+
+	.block {
+		row-gap: 27px;
+	}
+}
