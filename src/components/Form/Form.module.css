@@ -27,22 +27,12 @@
 	column-gap: 32px; 
 }
 
-.checkbox {
-	display: flex;
-	column-gap: 16px;
-}
-
 .check {
 	border: 2px solid rgba(194, 200, 205, 1);
 }
 
 .check:checked {
 	background: rgba(42, 108, 234, 1);
-}
-
-.checkbox span {
-	font-size: 16px;
-	line-height: 28px;
 }
 
 .button {
